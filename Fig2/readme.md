@@ -7,17 +7,6 @@ February 15 2018
 
 ```r
 library(sads)
-```
-
-```
-## Loading required package: bbmle
-```
-
-```
-## Loading required package: stats4
-```
-
-```r
 library(gnm)
 library(MASS)
 library(lme4)
@@ -28,39 +17,14 @@ library(lme4)
 ```
 
 ```
-## Loading required package: Matrix
-```
-
-```
 ## Warning: package 'Matrix' was built under R version 3.4.3
 ```
 
 ```r
 library(mgcv)
-```
 
-```
-## Loading required package: nlme
-```
-
-```
-## 
-## Attaching package: 'nlme'
-```
-
-```
-## The following object is masked from 'package:lme4':
-## 
-##     lmList
-```
-
-```
-## This is mgcv 1.8-17. For overview type 'help("mgcv-package")'.
-```
-
-```r
-source("functions_data_simulation.R")
-source("functions_analyses.R")
+source("../code/functions_data_simulation.R")
+source("../code/functions_analyses.R")
 set.seed(123)
 ```
 
@@ -82,578 +46,17 @@ fig2 = runAnalyses(abundanceDist = bci*12, numQuadrats= 5000, dispersal = c(0, 0
 
 ```
 ## [1] "running 0"
-```
-
-```
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-```
-
-```
 ## [1] "running 0.4"
-```
-
-```
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-```
-
-```
 ## [1] "running 0.8"
-```
-
-```
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-```
-
-```
 ## [1] "running Inf"
 ```
 
-```
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-```
-
-```
-## Warning in gnmFit(modelTools = modelTools, y = y, constrain = constrain, : Fitting algorithm has either not converged or converged
-## to a non-solution of the likelihood equations.
-## Use exitInfo() for numerical details of last iteration.
-```
-
-```
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-```
-
 ```r
-fig2[[5]] = runAnalysis(externalData = bciCounts)
-```
-
-```
-## Warning: Algorithm failed - no model could be estimated
-```
-
-```r
-names(fig2)[5] = "BCI"
-
-fig2[[6]] = runAnalysis(abundanceDist=bci*12, numQuadrats= 5000, dispersal = 0.1, theta = 1, adultSurvival = "LaManna")
-```
-
-```
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-
-## Warning: Algorithm failed - no model could be estimated
-```
-
-```r
-names(fig2)[6] = "LaManna"
+# fig2[[5]] = runAnalysis(externalData = bciCounts)
+# names(fig2)[5] = "BCI"
+# 
+# fig2[[6]] = runAnalysis(abundanceDist=bci*12, numQuadrats= 5000, dispersal = 0.1, theta = 1, adultSurvival = "LaManna")
+# names(fig2)[6] = "LaManna"
 ```
 
 ## Fig. 2
@@ -668,7 +71,7 @@ pch = c(rep(16,4), 17,15)
 
 oldpar <- par(mfrow = c(2,2), oma = c(3,3,1,1), mar = c(4,4,2,2), las=1, mgp=c(2.5, 0.5, 0), lwd=75/75, cex.axis=3/3, cex.lab=1, font.lab=2, tcl=(-0.2))
 
-for(j in 1:6) {
+for(j in 1:4) {
   x <- log10(fig2[[j]]$abundance)[fig2[[j]]$RickerLaManna$CNDD > -10]
   y <- fig2[[j]]$RickerLaManna$CNDD[fig2[[j]]$RickerLaManna$CNDD > -10]
   if (j == 1) {
@@ -683,7 +86,7 @@ for(j in 1:6) {
 }
 
 
-for(j in 1:6) {
+for(j in 1:4) {
   x <- log10(fig2[[j]]$abundance)
   y <- fig2[[j]]$PowerLaManna$CNDD
   if (j == 1) {
@@ -702,7 +105,7 @@ for(j in 1:6) {
 }
 
 
-for(j in 1:6) {
+for(j in 1:4) {
   x <- fig2[[j]]$zerosOnes[fig2[[j]]$RickerLaManna$CNDD > -10]
   y <- fig2[[j]]$RickerLaManna$CNDD[fig2[[j]]$RickerLaManna$CNDD > -10]
   if (j == 1) {
@@ -719,7 +122,7 @@ for(j in 1:6) {
 }
 
 
-for(j in 1:6) {
+for(j in 1:4) {
   x <- log10(fig2[[j]]$abundance)
   y <- fig2[[j]]$PowerRandomR$CNDD
   if (j == 1) {
@@ -735,7 +138,7 @@ for(j in 1:6) {
 mtext(c("A", "B", "C", "D"), side = rep(3,4), c(-2,-2,-25, -25), at = c(0,0.5, 0, 0.5), outer = T, cex = 1.2, font=2)
 ```
 
-![](Fig_2_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](readme_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 
 Fig. 2 Estimated CNDD vs. abundance (Log10 N/ha) per species from the Ricker model (**A**) and the offset-power model (**B**) at the 10x10m scale. Gray circles result from data simulated randomly without CNDD and changing spatial association between adults and recruits, ranging from perfect spatial coupling (lightest gray) to no spatial association (black). Blue triangles depict CNDD estimates for the tropical BCI plot; orange squares the simulation model without CNDD used in the appendix of LaManna *et al*.. For the Ricker model, CNDD bias is highly correlated with the proportion of corrected adult counts (**C**). Fitting a species-specific recruit-to-adult ratio in the offset-power model removes the CNDD-abundance correlation (**D**).

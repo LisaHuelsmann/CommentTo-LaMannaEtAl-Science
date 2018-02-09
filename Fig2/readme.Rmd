@@ -10,15 +10,15 @@ output:
 
 ## Load functions and packages
 
-```{r}
+```{r, message = F}
 library(sads)
 library(gnm)
 library(MASS)
 library(lme4)
 library(mgcv)
 
-source("functions_data_simulation.R")
-source("functions_analyses.R")
+source("../code/functions_data_simulation.R")
+source("../code/functions_analyses.R")
 set.seed(123)
 ```
 
@@ -36,11 +36,11 @@ bciCounts$a <- adult_all - bciCounts$A
 
 fig2 = runAnalyses(abundanceDist = bci*12, numQuadrats= 5000, dispersal = c(0, 0.4, 0.8, Inf))
 
-fig2[[5]] = runAnalysis(externalData = bciCounts)
-names(fig2)[5] = "BCI"
-
-fig2[[6]] = runAnalysis(abundanceDist=bci*12, numQuadrats= 5000, dispersal = 0.1, theta = 1, adultSurvival = "LaManna")
-names(fig2)[6] = "LaManna"
+# fig2[[5]] = runAnalysis(externalData = bciCounts)
+# names(fig2)[5] = "BCI"
+# 
+# fig2[[6]] = runAnalysis(abundanceDist=bci*12, numQuadrats= 5000, dispersal = 0.1, theta = 1, adultSurvival = "LaManna")
+# names(fig2)[6] = "LaManna"
 
 
 ```
@@ -56,7 +56,7 @@ pch = c(rep(16,4), 17,15)
 
 oldpar <- par(mfrow = c(2,2), oma = c(3,3,1,1), mar = c(4,4,2,2), las=1, mgp=c(2.5, 0.5, 0), lwd=75/75, cex.axis=3/3, cex.lab=1, font.lab=2, tcl=(-0.2))
 
-for(j in 1:6) {
+for(j in 1:4) {
   x <- log10(fig2[[j]]$abundance)[fig2[[j]]$RickerLaManna$CNDD > -10]
   y <- fig2[[j]]$RickerLaManna$CNDD[fig2[[j]]$RickerLaManna$CNDD > -10]
   if (j == 1) {
@@ -71,7 +71,7 @@ for(j in 1:6) {
 }
 
 
-for(j in 1:6) {
+for(j in 1:4) {
   x <- log10(fig2[[j]]$abundance)
   y <- fig2[[j]]$PowerLaManna$CNDD
   if (j == 1) {
@@ -90,7 +90,7 @@ for(j in 1:6) {
 }
 
 
-for(j in 1:6) {
+for(j in 1:4) {
   x <- fig2[[j]]$zerosOnes[fig2[[j]]$RickerLaManna$CNDD > -10]
   y <- fig2[[j]]$RickerLaManna$CNDD[fig2[[j]]$RickerLaManna$CNDD > -10]
   if (j == 1) {
@@ -107,7 +107,7 @@ for(j in 1:6) {
 }
 
 
-for(j in 1:6) {
+for(j in 1:4) {
   x <- log10(fig2[[j]]$abundance)
   y <- fig2[[j]]$PowerRandomR$CNDD
   if (j == 1) {
