@@ -1,8 +1,11 @@
 # Fig. 2
 Hülsmann & Hartig  
-February 15 2018  
+February 14 2018  
 
-## Load functions and packages
+Figure 2 shows estimated CNDD vs. abundance per species from the Ricker model and the offset-power model for data from the tropical BCI plot and for simulated data. 
+without CNDD and increasing spatial association between adults and recruits and for data simulated with the model without CNDD used in the appendix of LaManna *et al*.. For the Ricker model, CNDD bias is highly correlated with the proportion of corrected adult counts (**C**). Fitting a species-specific recruit-to-adult ratio in the offset-power model removes the CNDD-abundance correlation (**D**).
+
+## Load packages, functions and BCI data
 
 
 ```r
@@ -10,21 +13,18 @@ library(sads)
 library(gnm)
 library(MASS)
 library(lme4)
-```
-
-```
-## Warning: package 'lme4' was built under R version 3.4.3
-```
-
-```
-## Warning: package 'Matrix' was built under R version 3.4.3
-```
-
-```r
 library(mgcv)
 
 source("../code/functions_data_simulation.R")
 source("../code/functions_analyses.R")
+
+load(file = "../Data/bciCounts.Rdata")
+bciCounts$quadrat = rep(1:5000, times = length(unique(bciCounts$species)))
+adult_all = rep(by(bciCounts$A, bciCounts$quadrat, sum), length(unique(bciCounts$species)))
+recruit_all = rep(by(bciCounts$B, bciCounts$quadrat, sum), length(unique(bciCounts$species)))
+bciCounts$b <- recruit_all - bciCounts$B
+bciCounts$a <- adult_all - bciCounts$A
+
 set.seed(123)
 ```
 
@@ -33,14 +33,9 @@ set.seed(123)
 ## Run simulations 
 
 
-```r
-load(file = "../Data/bciCounts.Rdata")
-bciCounts$quadrat = rep(1:5000, times = length(unique(bciCounts$species)))
-adult_all = rep(by(bciCounts$A, bciCounts$quadrat, sum), length(unique(bciCounts$species)))
-recruit_all = rep(by(bciCounts$B, bciCounts$quadrat, sum), length(unique(bciCounts$species)))
-bciCounts$b <- recruit_all - bciCounts$B
-bciCounts$a <- adult_all - bciCounts$A
+Run simulations with four different dispersal settings
 
+```r
 fig2 = runAnalyses(abundanceDist = bci*12, numQuadrats= 5000, dispersal = c(0, 0.4, 0.8, Inf))
 ```
 
@@ -51,13 +46,20 @@ fig2 = runAnalyses(abundanceDist = bci*12, numQuadrats= 5000, dispersal = c(0, 0
 ## [1] "running Inf"
 ```
 
+Run simulations using real counts from the BCI data
+
 ```r
-# fig2[[5]] = runAnalysis(externalData = bciCounts)
-# names(fig2)[5] = "BCI"
-# 
-# fig2[[6]] = runAnalysis(abundanceDist=bci*12, numQuadrats= 5000, dispersal = 0.1, theta = 1, adultSurvival = "LaManna")
-# names(fig2)[6] = "LaManna"
+fig2[[5]] = runAnalysis(externalData = bciCounts)
+names(fig2)[5] = "BCI"
 ```
+
+Run simulations with the specifications by LaManna
+
+```r
+fig2[[6]] = runAnalysis(abundanceDist=bci*12, numQuadrats= 5000, dispersal = 0.1, theta = 1, adultSurvival = "LaManna")
+names(fig2)[6] = "LaManna"
+```
+
 
 ## Fig. 2
 
@@ -71,7 +73,7 @@ pch = c(rep(16,4), 17,15)
 
 oldpar <- par(mfrow = c(2,2), oma = c(3,3,1,1), mar = c(4,4,2,2), las=1, mgp=c(2.5, 0.5, 0), lwd=75/75, cex.axis=3/3, cex.lab=1, font.lab=2, tcl=(-0.2))
 
-for(j in 1:4) {
+for(j in 1:6) {
   x <- log10(fig2[[j]]$abundance)[fig2[[j]]$RickerLaManna$CNDD > -10]
   y <- fig2[[j]]$RickerLaManna$CNDD[fig2[[j]]$RickerLaManna$CNDD > -10]
   if (j == 1) {
@@ -86,7 +88,7 @@ for(j in 1:4) {
 }
 
 
-for(j in 1:4) {
+for(j in 1:6) {
   x <- log10(fig2[[j]]$abundance)
   y <- fig2[[j]]$PowerLaManna$CNDD
   if (j == 1) {
@@ -105,7 +107,7 @@ for(j in 1:4) {
 }
 
 
-for(j in 1:4) {
+for(j in 1:6) {
   x <- fig2[[j]]$zerosOnes[fig2[[j]]$RickerLaManna$CNDD > -10]
   y <- fig2[[j]]$RickerLaManna$CNDD[fig2[[j]]$RickerLaManna$CNDD > -10]
   if (j == 1) {
@@ -122,7 +124,7 @@ for(j in 1:4) {
 }
 
 
-for(j in 1:4) {
+for(j in 1:6) {
   x <- log10(fig2[[j]]$abundance)
   y <- fig2[[j]]$PowerRandomR$CNDD
   if (j == 1) {
@@ -138,7 +140,16 @@ for(j in 1:4) {
 mtext(c("A", "B", "C", "D"), side = rep(3,4), c(-2,-2,-25, -25), at = c(0,0.5, 0, 0.5), outer = T, cex = 1.2, font=2)
 ```
 
-![](readme_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](readme_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 
 Fig. 2 Estimated CNDD vs. abundance (Log10 N/ha) per species from the Ricker model (**A**) and the offset-power model (**B**) at the 10x10m scale. Gray circles result from data simulated randomly without CNDD and changing spatial association between adults and recruits, ranging from perfect spatial coupling (lightest gray) to no spatial association (black). Blue triangles depict CNDD estimates for the tropical BCI plot; orange squares the simulation model without CNDD used in the appendix of LaManna *et al*.. For the Ricker model, CNDD bias is highly correlated with the proportion of corrected adult counts (**C**). Fitting a species-specific recruit-to-adult ratio in the offset-power model removes the CNDD-abundance correlation (**D**).
+
+
+
+
+```
+## png 
+##   2
+```
+
