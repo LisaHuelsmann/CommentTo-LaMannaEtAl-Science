@@ -7,7 +7,9 @@ This code was used to generate counts of conspecific and heterospecific adults a
 
 The data were requested at http://ctfs.si.edu/webatlas/datasets/bci/. In accordance with LaManna *et al*., we used the 7th survey at BCI from http://ctfs.si.edu/ctfsrep. We believe that this is the same version of the BCI data that was used in LaManna *et al*..
 
-*Note that we cannot provide the original dataset in this repository due to the data sharing agreement of the BCI data. It must be requested from the data owners via http://ctfs.si.edu/webatlas/datasets/bci/ *
+*Note that we cannot provide the original dataset in this repository due to the data sharing agreement of the BCI data.* 
+
+It must be requested from the data owners via http://ctfs.si.edu/webatlas/datasets/bci/
 
 
 
