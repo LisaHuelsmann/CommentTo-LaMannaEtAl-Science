@@ -5,42 +5,21 @@ date: "February 15 2018"
 output: 
   html_document: 
     keep_md: yes
-    toc: yes
+    toc: no
 ---
 
-This supplement provides details on the simulation settings for Hülsmann *et al*., **Comment on “Plant diversity increases with the strength of negative density dependence at the global scale”** (LaManna *et al*. 2017 Science).
+This repository  provides code, simulation results, and explanations of the simulated scenarios for Hülsmann & Hartig (2018) **Comment on “Plant diversity increases with the strength of negative density dependence at the global scale”**. In review for *Science*. This paper is a technical comment on LaManna *et al*. 2017. *Science*.
 
-We used randomly simulated data with varying process and community characteristics to evaluate the behaviour of the Ricker and the offset-power model. Counts of recruits and adults were generated for 10x10m quadrats assuming different CNDD, dispersal, adult survival, habitat specificity, species abundance and adult proportion. The technical implementation and rationale behind these choices are outlined in the following.
+The material is organized in four subfolders
 
-# General setting
-
-Counts of adults and recruits in each quadrat were randomly drawn from a Poisson distribution with mean values defined by species abundance, the proportion of adults and the dynamic processes as follows.
-
-# CNDD
-
-
-# Dispersal
-
-
-# Adult survival
-
-
-# Habitat specificity
-
-
-# Species richness
-
-
-# Adult proportion
-
-
-# Analysis of the simulations
+* [**Fig1**](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/Fig1): this subfolder contains the materials necessary to reproduce Fig. 1 in Hülsmann & Hartig (2018)  
+* [**Fig2**](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/Fig2): this subfolder contains the materials necessary to reproduce Fig. 2 in Hülsmann & Hartig (2018)  
+* [**code**](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/code): this subfolder contains the R code used in Figs. 1,2
+      + for the simulation null models, as well as an explanation of their motivation, 
+      + and for the CNDD analyses using the Ricker and offset-power model
+* [**data**](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/data): this subfolder contains the data preparation scripts, and should also contain the raw data of BCI, which must be independently requested at http://ctfs.si.edu/webatlas/datasets/bci/
 
 
 
-
-```{r cars}
-
-```
 
 
