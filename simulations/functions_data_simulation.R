@@ -111,9 +111,8 @@ createAbundance <- function(species, total = 130000){
   
   abundance = rep(1, species)
   
-  decay = 20 /(species + 100)
+  decay = 20 /(species + 50)
   prob = dexp(1:species, rate = decay)
-  
   abundance = abundance + as.vector(rmultinom(1, total-species, prob = prob))
   
   names(abundance) = 1:species
