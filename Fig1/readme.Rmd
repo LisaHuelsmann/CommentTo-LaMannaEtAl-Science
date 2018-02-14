@@ -22,11 +22,6 @@ source("../code/functions_data_simulation.R")
 source("../code/functions_analyses.R")
 
 load(file = "../data/bciCounts.Rdata")
-bciCounts$quadrat = rep(1:5000, times = length(unique(bciCounts$species)))
-adult_all = rep(by(bciCounts$A, bciCounts$quadrat, sum), length(unique(bciCounts$species)))
-recruit_all = rep(by(bciCounts$B, bciCounts$quadrat, sum), length(unique(bciCounts$species)))
-bciCounts$b <- recruit_all - bciCounts$B
-bciCounts$a <- adult_all - bciCounts$A
 
 set.seed(123)
 ```
