@@ -1,6 +1,6 @@
 ---
 title: "Fig. 1"
-author: "Hülsmann & Hartig"
+author: "Lisa Hülsmann & Florian Hartig"
 date: "February 14 2018"
 output: 
   html_document: 

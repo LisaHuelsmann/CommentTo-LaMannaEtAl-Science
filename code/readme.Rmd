@@ -1,6 +1,12 @@
-# Data simulation and CNDD analyses
-Lisa Hülsmann & Florian Hartig  
-14 Februar 2018  
+---
+title: "Data simulation and CNDD analyses"
+author: "Lisa Hülsmann & Florian Hartig"
+date: "14 Februar 2018"
+output: 
+  html_document: 
+    keep_md: yes
+    toc: yes
+---
 
 
 ## Goal of the analysis

@@ -14,6 +14,6 @@ The material is organized in four subfolders
 * [**data**](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/data): this subfolder contains the data preparation scripts, and should also contain the raw data of BCI, which must be independently requested at http://ctfs.si.edu/webatlas/datasets/bci/
 
 
-
+For details on our analysis see [here](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/code).
 
 
