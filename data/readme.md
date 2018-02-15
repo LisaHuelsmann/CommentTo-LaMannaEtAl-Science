@@ -1,6 +1,6 @@
 # Preparation of BCI data
-Hülsmann & Hartig  
-February 14 2018  
+Lisa Hülsmann & Florian Hartig  
+February 15 2018  
 
 
 This code was used to generate counts of conspecific and heterospecific adults and recruits from BCI data.
@@ -34,7 +34,7 @@ dat <- read.csv("bci7.txt", sep="\t", header=T, stringsAsFactors = F)
 
 ## Modify structure of the dataset
 
-Change column names and coding (for applicability with code by LaManna et al.)
+Change column names and coding (for applicability with code by LaManna *et al*.)
 
 ```r
 dat$gx <- dat$PX
@@ -43,14 +43,14 @@ dat$dbh <- dat$DBH
 dat$species <- toupper(dat$Mnemonic)
 ```
 
-Remove multiple stems (following LaManna et al.)
+Remove multiple stems (following LaManna *et al*.)
 
 ```r
 dat <- dat[order(dat$Quadrat, dat$Tag, -dat$dbh), ]
 dat <- dat[!duplicated(dat$Tag), ]
 ```
 
-Remove Anaxagorea panamensis, a species which reproduces clonally (following LaManna et al.)
+Remove Anaxagorea panamensis, a species which reproduces clonally (following LaManna *et al*.)
 
 ```r
 dat <- dat[dat$species != "ANAXPA", ]
@@ -168,7 +168,7 @@ count_sp <- lapply(species, count_quadrat_sp, dat_liv = dat_liv, count_all = cou
 count_sp <- do.call(rbind.data.frame, count_sp)
 ```
 
-Clean count (following LaManna et al.)
+Clean count (following LaManna *et al*.)
 
 ```r
 quadrat_count <- count_sp %>%
