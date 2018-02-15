@@ -9,8 +9,8 @@ The material is organized in four subfolders
 * [**Fig1**](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/Fig1): this subfolder contains the materials necessary to reproduce Fig. 1 in Hülsmann & Hartig (2018)  
 * [**Fig2**](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/Fig2): this subfolder contains the materials necessary to reproduce Fig. 2 in Hülsmann & Hartig (2018)  
 * [**code**](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/code): this subfolder contains the R code used in Figs. 1,2
-      + for the simulation null models, as well as an explanation of their motivation, 
-      + and for the CNDD analyses using the Ricker and offset-power model
+    + for the simulation null models, as well as an explanation of their motivation, 
+    + and for the CNDD analyses using the Ricker and offset-power model
 * [**data**](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/data): this subfolder contains the data preparation scripts, and should also contain the raw data of BCI, which must be independently requested at http://ctfs.si.edu/webatlas/datasets/bci/
 
 
