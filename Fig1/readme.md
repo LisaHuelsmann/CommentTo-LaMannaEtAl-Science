@@ -5,6 +5,11 @@ February 15 2018
 
 In Fig. 1, we show how various processes (CNDD, dispersal, adult mortality and niche effects) as well as community characteristics (species richness and proportion of adults) affect CNDD estimates of the Ricker model. We varied each parameter and show respective CNDD means and CNDD-abundance correlations. Details on the simulations and parameter settings can be found [here](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/code).
 
+*Note that we cannot provide the original dataset in this repository due to the data sharing agreement of the BCI data.* 
+
+It must be requested from the data owners via http://ctfs.si.edu/webatlas/datasets/bci/
+
+
 
 ## Load packages, functions and BCI data
 
@@ -19,8 +24,7 @@ library(mgcv)
 source("../code/functions_data_simulation.R")
 source("../code/functions_analyses.R")
 
-load(file = "../data/bciCounts.Rdata")
-
+try(load(file = "../data/bciCounts.Rdata"))
 set.seed(123)
 ```
 
@@ -83,7 +87,7 @@ fig1[[6]] = runAnalysesAbundance(which = "ricker", species = rep(200,runs), disp
 Run analyses with real counts from the BCI data
 
 ```r
-fig1[[length(fig1)+1]] = runAnalysis(which = "ricker", externalData = bciCounts)
+if(exists("bciCounts")) fig1[[length(fig1)+1]] = runAnalysis(which = "ricker", externalData = bciCounts)
 ```
 
 
@@ -106,7 +110,7 @@ for(j in 1:6){
   abline(h = 0, col="grey", lty=2)
   clip(-0.1, 3.1, -100, 100)
   for(i in 1:runs) abline(fig1[[j]]$full[[i]]$lmfit, col = col[i], lwd=1.6)  
-  abline(fig1[[length(fig1)]]$lmfit, lwd=1.5)
+  if(exists("bciCounts")) abline(fig1[[length(fig1)]]$lmfit, lwd=1.5)
 }
 mtext(c("CNDD", "Simulation parameter", "Species abundance log10(N/ha)"), outer = T, side = c(2, 1, 1), las=0, line = c(2, -17.5, -0.2), cex = 0.8, font=2)
 mtext(c("A", "B"), side = rep(3,2), c(-4, -32), at = c(-0.04, -0.04), outer = T, cex = 1.2, font=2)
@@ -114,7 +118,7 @@ mtext(c("A", "B"), side = rep(3,2), c(-4, -32), at = c(-0.04, -0.04), outer = T,
 
 ![](readme_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
-Fig. 1 Weighted mean CNDD (**A**) and CNDD-abundance correlations (**B**) estimated by the Ricker model with simulated data, varying ecological parameters (CNDD, dispersal, adult survival, habitat specificity), and community characteristics (species richness, proportion of adults). CNDD is zero except for the CNDD subplots. For details on the simulation settings see (4). Line colors correspond to parameter values in the upper subpanels; results for the Barro Colorado Island (BCI) forest plot are shown in black. Parameters estimation follows LaManna *et al*..
+**Fig. 1** Weighted mean CNDD (**A**) and CNDD-abundance correlations (**B**) estimated by the Ricker model with simulated data, varying ecological parameters (CNDD, dispersal, adult survival, habitat specificity), and community characteristics (species richness, proportion of adults). CNDD is zero except for the CNDD subplots. For details on the simulation settings see (4). Line colors correspond to parameter values in the upper subpanels; results for the Barro Colorado Island (BCI) forest plot are shown in black. Parameters estimation follows LaManna *et al*..
 
 
 

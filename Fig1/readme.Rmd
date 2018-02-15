@@ -11,6 +11,11 @@ output:
 
 In Fig. 1, we show how various processes (CNDD, dispersal, adult mortality and niche effects) as well as community characteristics (species richness and proportion of adults) affect CNDD estimates of the Ricker model. We varied each parameter and show respective CNDD means and CNDD-abundance correlations. Details on the simulations and parameter settings can be found [here](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/code).
 
+*Note that we cannot provide the original dataset in this repository due to the data sharing agreement of the BCI data.* 
+
+It must be requested from the data owners via http://ctfs.si.edu/webatlas/datasets/bci/
+
+
 
 ## Load packages, functions and BCI data
 
