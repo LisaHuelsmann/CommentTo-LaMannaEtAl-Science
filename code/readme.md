@@ -35,12 +35,16 @@ distribution with mean values defined by species abundance, the
 proportion of adults and the dynamic processes as follows.
 
 #### CNDD
+<<<<<<< HEAD
 
 Conspecific negative density dependence was implemented by reducing
 local recruits as a function of local adults following an exponential
 survival function. To maintain the recruit-to-adult-ratio, we randomly
 placed the removed recruits to all quadrats. We vary CNDD between 0
 (i.e. no CNDD) and -2 (very strong CNDD).
+=======
+Conspecific negative density dependence was implemented by reducing local recruits as a function of local adults following an exponential survival function (see [code](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/blob/81fcea17e852a8792407676473f762d679235ac5/code/functions_data_simulation.R#L65-L67)). To maintain the recruit-to-adult-ratio, we randomly placed the removed recruits to all quadrats (see [code](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/blob/81fcea17e852a8792407676473f762d679235ac5/code/functions_data_simulation.R#L70-L71)). We vary CNDD between 0 (i.e. no CNDD) and -2 (very strong CNDD).
+>>>>>>> eddf14516c36884bf0e9a922679f8b3d53227234
 
 #### Dispersal
 
@@ -56,6 +60,7 @@ uniform dispersal kernel with only 10m radius would predict
 approximately 52% of all seeds to fall outside a 10x10m quadrat.
 
 #### Adult survival
+<<<<<<< HEAD
 
 To account for the time that a seed needs to develop a DBH above the
 threshold of 1cm, we randomly removed 1-survival of the adults after
@@ -76,6 +81,18 @@ specificity between 0 (i.e. no niche effects) and 0.9 (i.e. strong niche
 effects).
 
 #### Species richness and abundances
+=======
+To account for the time that a seed needs to develop a DBH above the threshold of 1cm, we randomly removed 1-survival of the adults after generating the recruits (see [code](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/blob/81fcea17e852a8792407676473f762d679235ac5/code/functions_data_simulation.R#L58-L61)). To obtain the same density of adults after mortality, we increased the initial abundance of adults correspondingly (see [code](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/blob/81fcea17e852a8792407676473f762d679235ac5/code/functions_data_simulation.R#L18)). We vary adult survival between 0.1 (i.e. observed recruits and adults are strongly decoupled, which corresponds to a species with very fast dynamics) and 1 (i.e. no temporal decoupling, which corresponds to the instantaneous dispersal of recruits).
+
+#### Habitat specificity
+Niche effects were considered by allowing a species to occupy only a proportion of the quadrats (see [code](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/blob/81fcea17e852a8792407676473f762d679235ac5/code/functions_data_simulation.R#L10)). With increasing specificity, the local density of adults and recruits at suitable quadrats increases, although species abundance at the plot scale remains equal. We varied habitat specificity between 0 (i.e. no niche effects) and 0.9 (i.e. strong niche effects).
+
+#### Species richness and abundances
+We generated species abundances for plots with increasing species richness using an exponential decay function (see [code](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/blob/81fcea17e852a8792407676473f762d679235ac5/code/functions_data_simulation.R#L112-L116)). We varied species richness between 10 and 400 species to reproduce a latitudinal gradient between temperate forests and the tropics.
+
+#### Adult proportion
+The proportion of individuals that are considered as adults was attempted at 0.2 by LaManna *et al*., but realized proportions varied due to a stepwise reduction of the DBH limit for recruit identification (i.e. 10, 5 or 2cm). On average, 0.4 of the individuals were adults in the BCI data. We varied adult proportion between 0.05 and 0.75 (see [code](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/blob/81fcea17e852a8792407676473f762d679235ac5/code/functions_data_simulation.R#L20-L21)).
+>>>>>>> eddf14516c36884bf0e9a922679f8b3d53227234
 
 We generated species abundances for plots with increasing species
 richness using an exponential decay function. We varied species richness
