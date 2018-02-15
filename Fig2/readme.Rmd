@@ -34,7 +34,7 @@ set.seed(123)
 
 Run analyses with simulated data using four different dispersal settings
 ```{r, warning = F}
-fig2 = runAnalyses(abundanceDist = bci[1:10]*12, numQuadrats= 5000, dispersal = c(0, 0.4, 0.8, Inf))
+fig2 = runAnalyses(abundanceDist = bci*12, numQuadrats= 5000, dispersal = c(0, 0.4, 0.8, Inf))
 ```
 
 Run analyses with real counts from the BCI data
@@ -47,7 +47,7 @@ if(exists("bciCounts")){
 
 Run analyses with simulated data using the specifications by LaManna *et al*.
 ```{r, warning = F}
-fig2[[6]] = runAnalysis(abundanceDist=bci[1:10]*12, numQuadrats= 5000, dispersal = 0.1, theta = 1, adultSurvival = "LaManna")
+fig2[[6]] = runAnalysis(abundanceDist=bci*12, numQuadrats= 5000, dispersal = 0.1, theta = 1, adultSurvival = "LaManna")
 names(fig2)[6] = "LaManna"
 ```
 
