@@ -1,10 +1,9 @@
 # Fig. 1
-Hülsmann & Hartig  
-February 14 2018  
+Lisa Hülsmann & Florian Hartig  
+February 15 2018  
 
 
-
-
+In Fig. 1, we show how various processes (CNDD, dispersal, adult mortality and niche effects) as well as community characteristics (species richness and proportion of adults) affect CNDD estimates of the Ricker model. We varied each parameter and show respective CNDD means and CNDD-abundance correlations. Details on the simulations and parameter settings can be found [here](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/code).
 
 
 ## Load packages, functions and BCI data
@@ -17,15 +16,10 @@ library(MASS)
 library(lme4)
 library(mgcv)
 
-source("../simulations/functions_data_simulation.R")
-source("../simulations/functions_analyses.R")
+source("../code/functions_data_simulation.R")
+source("../code/functions_analyses.R")
 
-load(file = "../Data/bciCounts.Rdata")
-bciCounts$quadrat = rep(1:5000, times = length(unique(bciCounts$species)))
-adult_all = rep(by(bciCounts$A, bciCounts$quadrat, sum), length(unique(bciCounts$species)))
-recruit_all = rep(by(bciCounts$B, bciCounts$quadrat, sum), length(unique(bciCounts$species)))
-bciCounts$b <- recruit_all - bciCounts$B
-bciCounts$a <- adult_all - bciCounts$A
+load(file = "../data/bciCounts.Rdata")
 
 set.seed(123)
 ```
@@ -93,7 +87,6 @@ fig1[[length(fig1)+1]] = runAnalysis(which = "ricker", externalData = bciCounts)
 ```
 
 
-
 ## Fig. 1
 
 
@@ -104,7 +97,7 @@ col = terrain.colors(runs+1)[1:runs]
 for(j in 1:6){
   plot(vect[[j]], fig1[[j]]$summary[,1], xlab = "", ylab = "mean CNDD", ylim = c(-6,0.5), main = names[j], col = NA, bg = col, pch=21, cex=1.6, yaxt="n", xaxt = "n", log = ifelse(j==5, "x", ""))
   if(j!=5) axis(1)
-  if(j==5) axis(1, at = 10^(1:3))
+  if(j==5) axis(1, at = rep(1:2, each=2)*10^(1:2))
   if(j==5) axis(1, at = c(10*1:9, 100*1:9), labels = F)
   if(j==1) axis(2)
   abline(h = 0, col="grey", lty=2)
@@ -126,8 +119,4 @@ Fig. 1 Weighted mean CNDD (**A**) and CNDD-abundance correlations (**B**) estima
 
 
 
-```
-## png 
-##   2
-```
 

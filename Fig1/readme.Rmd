@@ -1,12 +1,15 @@
 ---
 title: "Fig. 1"
 author: "Lisa Hülsmann & Florian Hartig"
-date: "February 14 2018"
+date: "February 15 2018"
 output: 
   html_document: 
     fig_width: 10
     keep_md: yes
 ---
+
+
+In Fig. 1, we show how various processes (CNDD, dispersal, adult mortality and niche effects) as well as community characteristics (species richness and proportion of adults) affect CNDD estimates of the Ricker model. We varied each parameter and show respective CNDD means and CNDD-abundance correlations. Details on the simulations and parameter settings can be found [here](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/code).
 
 
 ## Load packages, functions and BCI data
@@ -110,7 +113,7 @@ Fig. 1 Weighted mean CNDD (**A**) and CNDD-abundance correlations (**B**) estima
 
 
 
-```{r, echo = F}
+```{r, echo = F, results=FALSE}
 pdf("Fig1.pdf", width = 10, height = 5)
 par(mfcol = c(2,6), las=1)
 op <- par(mfcol = c(2,6), oma = c(2,4,0,0) + 0.1, mar = c(2,0,2,0)+0.3, las=1, mgp=c(1.5, 0.5, 0), lwd=75/75, cex.axis=3/3, cex.lab=2/3, tcl=(-0.2))
