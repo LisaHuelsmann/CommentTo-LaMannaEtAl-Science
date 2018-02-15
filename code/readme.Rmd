@@ -6,17 +6,11 @@ output:
   html_document: 
     keep_md: yes
     toc: yes
+  md_document:
+    variant: markdown_github
+    toc: yes
 ---
 
-```{r mdTOC, echo=FALSE}
-mdTOC <- grepl("markdown", knitr::opts_knit$get("rmarkdown.pandoc.to") )
-```
-
-```{r, engine='bash', results='asis',echo=FALSE, eval=mdTOC}
-# toc-template.txt is somewhere in the path and only contains a single line:: $toc$
-pandoc --template=toc-template.txt --toc --to html --from markdown testTOC.Rmd |\
-pandoc --to markdown --from html
-```
 
 
 ## Goal of the analysis

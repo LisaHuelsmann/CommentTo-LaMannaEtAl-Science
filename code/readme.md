@@ -4,9 +4,6 @@ Lisa Hülsmann & Florian Hartig
 
 
 
-
-
-
 ## Goal of the analysis
 
 The goal of the simulation null model was to be able to create synthetic data with and without CNDD, varying also a range of other processes and community characteristics that could affect the analysis (see list below), to evaluate the behaviour of the Ricker and the offset-power model under different conditions. 
