@@ -42,6 +42,6 @@ The proportion of individuals that are considered as adults was attempted at 0.2
 ## CNDD Analyses
 Parameter estimation followed the methodology by LaManna *et al*., i.e. using the Ricker and the offset-power models, including weighted regressions for the CNDD-abundance correlation, and models accounting for heterospecific adult and recruit density. Note that we show abundance as the number of trees per hectare (N), since the CNDD bias is mathematically linked to N, but N and basal area were strongly correlated in LaManna *et al*..
 
-[^1]: R. Condit, S. Lao, R. Pérez, S. B. Dolins, R. B. Foster, S. P. Hubbell, Barro Colorado Forest Census Plot Data, 2012 Version. Center for Tropical Forest Science Databases (2012).
-[^2]: H. C. Muller-Landau, S. J. Wright, O. Calder, R. Condit, S. P. Hubbell, Interspecific Variation in Primary Seed Dispersal in a Tropical Forest. *J Ecol* **96**, 653-667 (2008).
+###### 1: R. Condit, S. Lao, R. Pérez, S. B. Dolins, R. B. Foster, S. P. Hubbell, Barro Colorado Forest Census Plot Data, 2012 Version. Center for Tropical Forest Science Databases (2012).
+###### 2: H. C. Muller-Landau, S. J. Wright, O. Calder, R. Condit, S. P. Hubbell, Interspecific Variation in Primary Seed Dispersal in a Tropical Forest. *J Ecol* **96**, 653-667 (2008).
 
