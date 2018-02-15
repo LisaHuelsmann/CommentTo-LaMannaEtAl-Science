@@ -1,15 +1,10 @@
 ---
 title: "Data simulation and CNDD analyses"
 author: "Lisa Hülsmann & Florian Hartig"
-date: "14 Februar 2018"
+date: "February 15 2018"
 output: 
   html_document: 
     keep_md: yes
-    toc: yes
-    toc_depth: 2
-  md_document:
-    toc: yes
-    toc_depth: 1
 ---
 
 

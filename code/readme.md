@@ -1,16 +1,6 @@
----
-title: "Data simulation and CNDD analyses"
-author: "Lisa Hülsmann & Florian Hartig"
-date: "14 Februar 2018"
-output: 
-  html_document: 
-    keep_md: yes
-    toc: yes
-    toc_depth: 2
-  md_document:
-    toc: yes
-    toc_depth: 1
----
+# Data simulation and CNDD analyses
+Lisa Hülsmann & Florian Hartig  
+February 15 2018  
 
 
 
