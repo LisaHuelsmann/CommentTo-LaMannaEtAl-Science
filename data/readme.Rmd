@@ -42,7 +42,7 @@ Change column names and coding (for applicability with code by LaManna *et al*.)
 dat$gx <- dat$PX
 dat$gy <- dat$PY
 dat$dbh <- dat$DBH
-dat$species <- toupper(dat$Mnemonic)
+dat$species <- as.factor(toupper(dat$Mnemonic))
 ```
 
 Remove multiple stems (following LaManna *et al*.)
@@ -166,6 +166,7 @@ quadrat_count <- count_sp %>%
 
 bciCounts <- count_sp[!count_sp$species %in% quadrat_count$species, ]
 bciCounts <- bciCounts[, c("species", "A", "B", "a", "b")]
+bciCounts$species <- as.factor(bciCounts$species)
 ```
 
 
