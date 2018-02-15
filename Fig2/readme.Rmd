@@ -8,7 +8,13 @@ output:
     keep_md: yes
 ---
 
+
 In Fig. 2, we show how CNDD estimated with the Ricker and the offset-power model varies with abundance for real data from the tropical BCI plot and for simulated data with varying spatial association between adults and recruits. In the second row of the plot, we depict how bias arises in the Ricker and the offset-power model. Details on the simulations can be found [here](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/code). 
+
+*Note that we cannot provide the original dataset in this repository due to the data sharing agreement of the BCI data.* 
+
+It must be requested from the data owners via http://ctfs.si.edu/webatlas/datasets/bci/
+
 
 
 ## Load packages, functions and BCI data
@@ -136,7 +142,8 @@ mtext(c("A", "B", "C", "D"), side = rep(3,4), c(-2,-2,-25, -25), at = c(0,0.5, 0
 ```
 
 
-**Fig. 2** Estimated CNDD vs. abundance (Log10 N/ha) per species from the Ricker model (**A**) and the offset-power model (**B**) at the 10x10m scale. Gray circles result from data simulated randomly without CNDD and changing spatial association between adults and recruits, ranging from perfect spatial coupling (lightest gray) to no spatial association (black). Blue triangles depict CNDD estimates for the tropical BCI plot; orange squares the simulation model without CNDD used in the appendix of LaManna *et al*.. For the Ricker model, CNDD bias is highly correlated with the proportion of corrected adult counts (**C**). Fitting a species-specific recruit-to-adult ratio in the offset-power model removes the CNDD-abundance correlation (**D**).
+**Fig. 2** Estimated CNDD vs. abundance (Log10 N/ha) per species from the Ricker model (**A**) and the offset-power model (**B**) at the 10x10m scale. Gray circles result from data simulated randomly without CNDD and changing spatial association between adults and recruits, ranging from perfect spatial coupling (lightest gray) to no spatial association (black). Blue triangles depict CNDD estimates for the tropical Barro Colorado Island (BCI) forest plot; orange squares the simulation model without CNDD used in the appendix of LaManna *et al*.. For the Ricker model, CNDD bias is highly correlated with the proportion of corrected adult counts (**C**). Fitting a species-specific recruit-to-adult ratio in the offset-power model removes the CNDD-abundance correlation (**D**). For details on the simulation settings see [here](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/code). 
+
 
 
 
