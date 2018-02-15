@@ -109,7 +109,7 @@ mtext(c("A", "B"), side = rep(3,2), c(-4, -32), at = c(-0.04, -0.04), outer = T,
 
 ```
 
-Fig. 1 Weighted mean CNDD (**A**) and CNDD-abundance correlations (**B**) estimated by the Ricker model with simulated data, varying ecological parameters (CNDD, dispersal, adult survival, habitat specificity), and community characteristics (species richness, proportion of adults). CNDD is zero except for the CNDD subplots. For details on the simulation settings see (4). Line colors correspond to parameter values in the upper subpanels; results for the Barro Colorado Island (BCI) forest plot are shown in black. Parameters estimation follows LaManna *et al*..
+**Fig. 1** Weighted mean CNDD (**A**) and CNDD-abundance correlations (**B**) estimated by the Ricker model with simulated data, varying ecological parameters (CNDD, dispersal, adult survival, habitat specificity), and community characteristics (species richness, proportion of adults). CNDD is zero except for the CNDD subplots. For details on the simulation settings see (4). Line colors correspond to parameter values in the upper subpanels; results for the Barro Colorado Island (BCI) forest plot are shown in black. Parameters estimation follows LaManna *et al*..
 
 
 

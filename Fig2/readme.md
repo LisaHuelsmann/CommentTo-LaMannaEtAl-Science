@@ -1,9 +1,9 @@
 # Fig. 2
-Hülsmann & Hartig  
-February 14 2018  
+Lisa Hülsmann & Florian Hartig  
+February 15 2018  
 
-Figure 2 shows estimated CNDD vs. abundance per species from the Ricker model and the offset-power model for data from the tropical BCI plot and for simulated data. 
-without CNDD and increasing spatial association between adults and recruits and for data simulated with the model without CNDD used in the appendix of LaManna *et al*.. For the Ricker model, CNDD bias is highly correlated with the proportion of corrected adult counts (**C**). Fitting a species-specific recruit-to-adult ratio in the offset-power model removes the CNDD-abundance correlation (**D**).
+In Fig. 2, we show how CNDD estimated with the Ricker and the offset-power model varies with abundance for real data from the tropical BCI plot and for simulated data with varying spatial association between adults and recruits. In the second row of the plot, we depict how bias arises in the Ricker and the offset-power model. Details on the simulations can be found [here](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/code). 
+
 
 ## Load packages, functions and BCI data
 
@@ -18,22 +18,16 @@ library(mgcv)
 source("../code/functions_data_simulation.R")
 source("../code/functions_analyses.R")
 
-load(file = "../Data/bciCounts.Rdata")
-bciCounts$quadrat = rep(1:5000, times = length(unique(bciCounts$species)))
-adult_all = rep(by(bciCounts$A, bciCounts$quadrat, sum), length(unique(bciCounts$species)))
-recruit_all = rep(by(bciCounts$B, bciCounts$quadrat, sum), length(unique(bciCounts$species)))
-bciCounts$b <- recruit_all - bciCounts$B
-bciCounts$a <- adult_all - bciCounts$A
+load(file = "../data/bciCounts.Rdata")
 
 set.seed(123)
 ```
 
 
 
-## Run simulations 
+## Run simulations and analyses
 
-
-Run simulations with four different dispersal settings
+Run analyses with simulated data using four different dispersal settings
 
 ```r
 fig2 = runAnalyses(abundanceDist = bci*12, numQuadrats= 5000, dispersal = c(0, 0.4, 0.8, Inf))
@@ -46,14 +40,14 @@ fig2 = runAnalyses(abundanceDist = bci*12, numQuadrats= 5000, dispersal = c(0, 0
 ## [1] "running Inf"
 ```
 
-Run simulations using real counts from the BCI data
+Run analyses with real counts from the BCI data
 
 ```r
 fig2[[5]] = runAnalysis(externalData = bciCounts)
 names(fig2)[5] = "BCI"
 ```
 
-Run simulations with the specifications by LaManna
+Run analyses with simulated data using the specifications by LaManna *et al*.
 
 ```r
 fig2[[6]] = runAnalysis(abundanceDist=bci*12, numQuadrats= 5000, dispersal = 0.1, theta = 1, adultSurvival = "LaManna")
@@ -148,8 +142,4 @@ Fig. 2 Estimated CNDD vs. abundance (Log10 N/ha) per species from the Ricker mod
 
 
 
-```
-## png 
-##   2
-```
 

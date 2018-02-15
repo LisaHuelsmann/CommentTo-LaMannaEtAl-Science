@@ -1,14 +1,14 @@
 ---
 title: "Fig. 2"
 author: "Lisa Hülsmann & Florian Hartig"
-date: "February 14 2018"
+date: "February 15 2018"
 output: 
   html_document: 
     fig_height: 7
     keep_md: yes
 ---
 
-Figure 2 shows estimated CNDD vs. abundance per species from the Ricker model and the offset-power model for real data from the tropical BCI plot and for simulated data with varying spatial association between adults and recruits. In the second row of the plot, we depict how bias arises in the Ricker and the offset-power model, respectively.  
+In Fig. 2, we show how CNDD estimated with the Ricker and the offset-power model varies with abundance for real data from the tropical BCI plot and for simulated data with varying spatial association between adults and recruits. In the second row of the plot, we depict how bias arises in the Ricker and the offset-power model. Details on the simulations can be found [here](https://github.com/LisaHuelsmann/CommentTo-LaMannaEtAl-Science/tree/master/code). 
 
 
 ## Load packages, functions and BCI data
@@ -43,13 +43,12 @@ fig2[[5]] = runAnalysis(externalData = bciCounts)
 names(fig2)[5] = "BCI"
 ```
 
-Run analyses with simulated data using the specifications by LaManna
+Run analyses with simulated data using the specifications by LaManna *et al*.
 ```{r, warning = F}
 fig2[[6]] = runAnalysis(abundanceDist=bci*12, numQuadrats= 5000, dispersal = 0.1, theta = 1, adultSurvival = "LaManna")
 names(fig2)[6] = "LaManna"
 ```
 
-Save 
 
 ## Fig. 2
 
@@ -130,11 +129,11 @@ mtext(c("A", "B", "C", "D"), side = rep(3,4), c(-2,-2,-25, -25), at = c(0,0.5, 0
 ```
 
 
-Fig. 2 Estimated CNDD vs. abundance (Log10 N/ha) per species from the Ricker model (**A**) and the offset-power model (**B**) at the 10x10m scale. Gray circles result from data simulated randomly without CNDD and changing spatial association between adults and recruits, ranging from perfect spatial coupling (lightest gray) to no spatial association (black). Blue triangles depict CNDD estimates for the tropical BCI plot; orange squares the simulation model without CNDD used in the appendix of LaManna *et al*.. For the Ricker model, CNDD bias is highly correlated with the proportion of corrected adult counts (**C**). Fitting a species-specific recruit-to-adult ratio in the offset-power model removes the CNDD-abundance correlation (**D**).
+**Fig. 2** Estimated CNDD vs. abundance (Log10 N/ha) per species from the Ricker model (**A**) and the offset-power model (**B**) at the 10x10m scale. Gray circles result from data simulated randomly without CNDD and changing spatial association between adults and recruits, ranging from perfect spatial coupling (lightest gray) to no spatial association (black). Blue triangles depict CNDD estimates for the tropical BCI plot; orange squares the simulation model without CNDD used in the appendix of LaManna *et al*.. For the Ricker model, CNDD bias is highly correlated with the proportion of corrected adult counts (**C**). Fitting a species-specific recruit-to-adult ratio in the offset-power model removes the CNDD-abundance correlation (**D**).
 
 
 
-```{r, echo = F}
+```{r, echo = F, results=FALSE}
 pdf("Fig2.pdf", width = 8, height = 8)
 gr <- seq(0.8, 0, length.out = 4)
 col = c(rgb(gr, gr, gr, 0.25),  rgb(0, 160, 176, alpha = 0.25*255, max = 255), rgb(235, 104, 65, alpha = 0.25*255, max = 255))
